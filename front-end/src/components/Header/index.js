@@ -2,30 +2,57 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className="d-flex justify-content-center bg-dark">
+    <div className="bg-dark">
       <div className="container">
-        <header className="d-flex flex-wrap justify-content-center align-items-center al py-3">
-          <Link
-            to="/"
-            className="d-flex align-items-center mb-3 ps-4 mb-md-0 me-md-auto text-dark text-decoration-none"
-          >
-            <span className="fs-2 text-white">My Investment</span>
-          </Link>
-          <div className="">
-            <ul className="nav nav-pills">
-              <li className="">
-                <Link className="btn btn-primary" to="/Cadastrar-Investimento">
-                  Cadastrar Investimento
-                </Link>
-              </li>
-              <li className="ps-3">
-                <Link className="btn btn-primary" to="/Listar-Investimento">
-                  Listar Investimentos
+        <div className="container-fluid">
+          <nav className="navbar navbar-expand-lg navbar-dark py-3">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li>
+                <Link to="/" className="text-decoration-none">
+                  <span className="text-white fs-2">MyInvestment</span>
                 </Link>
               </li>
             </ul>
-          </div>
-        </header>
+            
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarButtonsExample"
+              aria-controls="navbarButtonsExample"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <span></span>
+                </li>
+              </ul>
+
+              <div className="d-flex align-items-center">
+                  <Link className="btn btn-primary" to="/Cadastrar-Investimento">
+                    Cadastrar
+                  </Link>
+                  <div className="px-3">
+                    <Link className="btn btn-primary px-3" to="/Listar-Investimento">
+                      Investimentos
+                    </Link>
+                  </div>
+                  <Link className="btn btn-primary" to="/Estatistica-Investimento">
+                    Estatísticas
+                  </Link>
+              </div>
+
+            </div>
+
+          </nav>
+
+        </div>
       </div>
     </div>
   );
